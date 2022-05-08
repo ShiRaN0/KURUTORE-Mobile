@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		5BD0F47828269649008F58E5 /* crew_trainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F47728269649008F58E5 /* crew_trainingApp.swift */; };
-		5BD0F47A28269649008F58E5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F47928269649008F58E5 /* ContentView.swift */; };
+		5BD0F47A28269649008F58E5 /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F47928269649008F58E5 /* TopView.swift */; };
 		5BD0F47C2826964C008F58E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD0F47B2826964C008F58E5 /* Assets.xcassets */; };
 		5BD0F47F2826964C008F58E5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BD0F47E2826964C008F58E5 /* Preview Assets.xcassets */; };
+		5BD0F4862826A1FD008F58E5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F4852826A1FD008F58E5 /* SplashView.swift */; };
+		5BD0F48828278649008F58E5 /* merchandise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F48728278649008F58E5 /* merchandise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5BD0F47428269649008F58E5 /* crew-training.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "crew-training.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BD0F47728269649008F58E5 /* crew_trainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = crew_trainingApp.swift; sourceTree = "<group>"; };
-		5BD0F47928269649008F58E5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5BD0F47928269649008F58E5 /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		5BD0F47B2826964C008F58E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BD0F47E2826964C008F58E5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5BD0F4852826A1FD008F58E5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		5BD0F48728278649008F58E5 /* merchandise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = merchandise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +55,12 @@
 		5BD0F47628269649008F58E5 /* crew-training */ = {
 			isa = PBXGroup;
 			children = (
+				5BD0F4852826A1FD008F58E5 /* SplashView.swift */,
 				5BD0F47728269649008F58E5 /* crew_trainingApp.swift */,
-				5BD0F47928269649008F58E5 /* ContentView.swift */,
+				5BD0F47928269649008F58E5 /* TopView.swift */,
 				5BD0F47B2826964C008F58E5 /* Assets.xcassets */,
 				5BD0F47D2826964C008F58E5 /* Preview Content */,
+				5BD0F48728278649008F58E5 /* merchandise.swift */,
 			);
 			path = "crew-training";
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BD0F47A28269649008F58E5 /* ContentView.swift in Sources */,
+				5BD0F47A28269649008F58E5 /* TopView.swift in Sources */,
 				5BD0F47828269649008F58E5 /* crew_trainingApp.swift in Sources */,
+				5BD0F4862826A1FD008F58E5 /* SplashView.swift in Sources */,
+				5BD0F48828278649008F58E5 /* merchandise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +275,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"crew-training/Preview Content\"";
+				DEVELOPMENT_TEAM = 6YXQD94JB2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -295,6 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"crew-training/Preview Content\"";
+				DEVELOPMENT_TEAM = 6YXQD94JB2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

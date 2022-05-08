@@ -11,7 +11,7 @@ import SwiftUI
 struct crew_trainingApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView()
         }
     }
 }
