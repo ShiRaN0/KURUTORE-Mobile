@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State var isShowingSheet = false
     var body: some View {
         NavigationView{
             VStack{
@@ -19,9 +20,11 @@ struct ProfileView: View {
             
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing){
-                    Button(action:{}) {
+                    Button(action:{self.isShowingSheet.toggle()}) {
                         Image(systemName: "gearshape")
                             .foregroundColor(.gray)
+                    }.sheet(isPresented:$isShowingSheet ){
+                        SettingView()
                     }
                 }
                 

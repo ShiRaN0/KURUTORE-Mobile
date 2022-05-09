@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ManualView: View {
+    @State var isShowingSheet = false
     var body: some View {
         
         NavigationView{
@@ -21,9 +22,11 @@ struct ManualView: View {
             
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing){
-                    Button(action:{}) {
+                    Button(action:{self.isShowingSheet.toggle()}) {
                         Image(systemName: "gearshape")
                             .foregroundColor(.gray)
+                    }.sheet(isPresented:$isShowingSheet ){
+                        SettingView()
                     }
                 }
                 
