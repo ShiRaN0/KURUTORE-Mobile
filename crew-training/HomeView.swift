@@ -12,8 +12,23 @@ struct HomeView: View {
         NavigationView{
             List(1..<20) { index in
                 NavigationLink(destination: Text("問題ページ")) {
-                    Text("\(index)行目")
-                }
+                    HStack{
+                        Image(systemName:"questionmark.circle")
+                        VStack{
+                            Text("\(index)行目")
+                                
+                            Text("hoge")
+                            
+                        }.padding(.leading)
+                            
+                    }
+                }.listRowInsets(
+                    EdgeInsets(top: 10,
+                               leading: 50,
+                               bottom: 10,
+                               trailing: 40
+                              )
+                )
             }.navigationTitle("クルトレ").navigationBarTitleDisplayMode(.inline)
             
                 .toolbar {
