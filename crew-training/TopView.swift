@@ -14,7 +14,7 @@ struct TopView: View {
     }
     var body: some View {
        
-
+        // TODO: - 一番下までスクロールするとTabBarの色が消えることの是非を考える -
         TabView{
             HomeView()
                 .tabItem(){
