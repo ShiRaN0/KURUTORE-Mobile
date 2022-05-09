@@ -12,7 +12,7 @@ struct ManualView: View {
         
         NavigationView{
             VStack{
-                Text("navigation")
+                Text("navigation\nhogehoge")
                 //ここに書いてね
             }
             
