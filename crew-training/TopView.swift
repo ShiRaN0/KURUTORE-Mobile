@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TopView: View {
+    
     init(){
         UITabBar.appearance().barTintColor = UIColor.red
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray

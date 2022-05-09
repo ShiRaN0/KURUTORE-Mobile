@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var isShowingSheet = false
     var body: some View {
         NavigationView{
             List(1..<20) { index in
@@ -33,9 +34,11 @@ struct HomeView: View {
             
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing){
-                        Button(action:{}) {
+                        Button(action:{self.isShowingSheet.toggle()}) {
                             Image(systemName: "gearshape")
                                 .foregroundColor(.gray)
+                        }.sheet(isPresented:$isShowingSheet ){
+                            SettingView()
                         }
                     }
                     
