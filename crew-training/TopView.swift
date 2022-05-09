@@ -8,40 +8,35 @@
 import SwiftUI
 
 struct TopView: View {
+    init(){
+        UITabBar.appearance().barTintColor = UIColor.red
+        UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+    }
     var body: some View {
-        
-        
-        NavigationView{
-            List(1..<20) { index in
-                NavigationLink(destination: Text("問題ページ")) {
-                    Text("\(index)行目")
+       
+
+        TabView{
+            HomeView()
+                .tabItem(){
+                    Image(systemName: "house")
+                    Text("Home")
+                    
                 }
-            }.navigationTitle("クルトレ")
-            
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing){
-                        Button("Cancel") {}
-                    }
-                    ToolbarItemGroup(placement: .bottomBar){
-                        Spacer()
-                        Button(action: {}) {
-                            Image(systemName: "house")
-                        }
-                        Spacer()
-                        Button(action: {}) {
-                            Image(systemName: "book")
-                        }
-                        Spacer()
-                        Button(action: {}) {
-                            Image(systemName: "person.circle")
-                        }
-                        Spacer()
-                        
-                    }
+            ManualView()
+                .tabItem(){
+                    Image(systemName: "book.fill")
+                    Text("Manual")
+                }
+            ProfileView()
+                .tabItem(){
+                    Image(systemName: "person.circle")
+                    Text("Profile")
                 }
         }
         
+        
     }
+    
 }
 
 struct TopView_Previews: PreviewProvider {

@@ -39,7 +39,7 @@ struct SplashView: View {
             }
         }
         else{
-            TopView()
+           TopView()
         }
     }
 }
