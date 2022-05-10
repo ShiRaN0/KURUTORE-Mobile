@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State var isShowingSheet = false
+    
     var body: some View {
         NavigationView{
             List(1..<20) { index in
@@ -17,11 +18,11 @@ struct HomeView: View {
                         Image(systemName:"questionmark.circle")
                         VStack{
                             Text("\(index)行目")
-                                
+                            
                             Text("hoge")
                             
                         }.padding(.leading)
-                            
+                        
                     }
                 }.listRowInsets(
                     EdgeInsets(top: 10,

@@ -12,10 +12,11 @@ struct TopView: View {
     init(){
         UITabBar.appearance().barTintColor = UIColor.red
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray
+        UITabBar.appearance().backgroundColor = UIColor.red
     }
     var body: some View {
-       
-        // TODO: - 一番下までスクロールするとTabBarの色が消えることの是非を考える -
+        
+        
         TabView{
             HomeView()
                 .tabItem(){

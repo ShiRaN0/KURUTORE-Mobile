@@ -39,31 +39,46 @@ enum Pracement:addable{
     case horizontal
 }
 
+enum Topping:addable{
+    case hoge
+}
 
-
-protocol foundation{
+enum Burger:addable{
+    case ハンバーガー
+    case チーズバーガー
+    case てりやきバーガー
     
-    var name : String{set get}
-    var toppingList:[addable]{get set}
+    static let BurgerElements:[Burger] = [.ハンバーガー,.チーズバーガー,.てりやきバーガー]
+}
+
+protocol Menu{
+    
+    var name : Burger{set get}
+    var toppingList:[Topping]{get set}
     
     func getToppingList()->[addable]
 }
 
 
+//enum hoge{
+//    case humburger = ["Buns":"Regular",]
+//}
 
-class Burger : foundation{
-    var name:String
-    var toppingList: [addable] = []
-    
-    init(name:String){
-        self.name = name
-    }
-    
-    func addTopping(topping:addable){
-        toppingList.append(topping)
-    }
-    
-    func getToppingList() -> [addable] {
-        return toppingList
-    }
-}
+
+//class BurgerClass : Menu{
+//    var name:Burger
+//    var buns:Buns
+//    var method:Method
+//    var wrap:Wrap
+//    var pracement:Pracement
+//    var toppingList: [Topping] = []
+//
+//    init(){}
+//    func addTopping(topping:Topping){
+//        toppingList.append(topping)
+//    }
+//
+//    func getToppingList() -> [addable] {
+//        return toppingList
+//    }
+//}
