@@ -5,14 +5,25 @@
 		"method": "bake",
 		"pracement": "horizontal"
 		"toppingList": [
+			"mustard",
+			"ketchup",
+			"onion",
+			"pickles",
+			"ten_one"
 		]
 	},
 	{
 		"name": "チーズバーガー",
-		"buns":
-		"method":
-		"pracement":
+		"buns": "Regular"
+		"method": "bake"
+		"pracement": "horizontal"
 		"toppingList": [
+			"mustard",
+			"ketchup",
+			"onion",
+			"pickles",
+			"cheese",
+			"ten_one"
 		]
 	}
 ]
