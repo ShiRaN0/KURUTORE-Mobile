@@ -12,7 +12,7 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView{
-            List(1..<20) { index in
+            List(0..<Burger.PrintPropertiesLength()) { index in
                 NavigationLink(destination: Text("問題ページ")) {
                     HStack{
                         Image(systemName:"questionmark.circle")

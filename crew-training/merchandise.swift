@@ -19,7 +19,9 @@ enum Buns:addable{
     case PoppySeed
     case Tatsuta
     case rice
+    
 }
+
 
 enum Method:addable{
     case bake
@@ -47,8 +49,12 @@ enum Burger:addable{
     case ハンバーガー
     case チーズバーガー
     case てりやきバーガー
-    
+
+    // TODO: - implements Caselterable -
     static let BurgerElements:[Burger] = [.ハンバーガー,.チーズバーガー,.てりやきバーガー]
+    static func PrintPropertiesLength() -> Int {
+        return BurgerElements.count
+    }
 }
 
 protocol Menu{
@@ -60,25 +66,25 @@ protocol Menu{
 }
 
 
-//enum hoge{
-//    case humburger = ["Buns":"Regular",]
-//}
 
+class BurgerClass : Menu{
+    
+    var name:Burger
+    var buns:Buns
+    var method:Method
+    var wrap:Wrap
+    var pracement:Pracement
+    var toppingList: [Topping] = []
 
-//class BurgerClass : Menu{
-//    var name:Burger
-//    var buns:Buns
-//    var method:Method
-//    var wrap:Wrap
-//    var pracement:Pracement
-//    var toppingList: [Topping] = []
-//
-//    init(){}
-//    func addTopping(topping:Topping){
-//        toppingList.append(topping)
-//    }
-//
-//    func getToppingList() -> [addable] {
-//        return toppingList
-//    }
-//}
+    init(){
+        // TODO: - Jsonパース -
+    }
+    
+    func addTopping(topping:Topping){
+        toppingList.append(topping)
+    }
+
+    func getToppingList() -> [addable] {
+        return toppingList
+    }
+}
