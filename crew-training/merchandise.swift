@@ -29,12 +29,6 @@ enum Method:addable{
     case steam_12sec
 }
 
-enum Wrap:addable{
-    case normal
-    case supachiki
-    case samurai_blue
-    case samurai_red
-}
 
 enum Pracement:addable{
     case vertical
@@ -45,39 +39,40 @@ enum Topping:addable{
     case hoge
 }
 
-enum Burger:addable{
+enum Burger_name:addable{
     case ハンバーガー
     case チーズバーガー
     case てりやきバーガー
 
-    // TODO: - implements Caselterable -
-    static let BurgerElements:[Burger] = [.ハンバーガー,.チーズバーガー,.てりやきバーガー]
-    static func PrintPropertiesLength() -> Int {
-        return BurgerElements.count
-    }
+    
+//Json内のバーガーの数でHomeViewのリストを使うため不要
+//    // TODO: - implements Caselterable -
+//    static let BurgerElements:[Burger_name] = [.ハンバーガー,.チーズバーガー,.てりやきバーガー]
+//    static func PrintPropertiesLength() -> Int {
+//        return BurgerElements.count
+//    }
 }
 
 protocol Menu{
     
-    var name : Burger{set get}
+    var name : Burger_name{set get}
     var toppingList:[Topping]{get set}
     
     func getToppingList()->[addable]
 }
 
 
-
 class BurgerClass : Menu{
     
-    var name:Burger
+    var name:Burger_name
     var buns:Buns
     var method:Method
-    var wrap:Wrap
+    var wrap:Burger_name
     var pracement:Pracement
     var toppingList: [Topping] = []
 
-    init(){
-        // TODO: - Jsonパース -
+    init(burgerName:String){
+        // TODO: - HomeでパースされたJsonデータの"name"によって初期化の値を変える-
     }
     
     func addTopping(topping:Topping){
