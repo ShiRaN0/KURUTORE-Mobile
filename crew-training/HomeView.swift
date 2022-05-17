@@ -9,15 +9,20 @@ import SwiftUI
 
 struct HomeView: View {
     @State var isShowingSheet = false
+    @State var burgerNameList :[String] = ["aa","bb"]
+    @State var burgerNameForBinding = "hoge"
+    
+    // TODO: - Jsonパース　-
+
     
     var body: some View {
         NavigationView{
-            List(0..<Burger.PrintPropertiesLength()) { index in
-                NavigationLink(destination: Text("問題ページ")) {
+            List(0..<burgerNameList.count) { index in
+                NavigationLink(destination: Text(burgerNameList[index])) {
                     HStack{
                         Image(systemName:"questionmark.circle")
                         VStack{
-                            Text("\(index)行目")
+                            Text(burgerNameList[index])
                             
                             Text("hoge")
                             
