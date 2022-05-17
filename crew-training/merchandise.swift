@@ -36,7 +36,31 @@ enum Pracement:addable{
 }
 
 enum Topping:addable{
-    case hoge
+    case mustard
+    case ketchup
+    case onion
+    case pickles
+    case sliced_onion
+    case tomato
+    case sliced_lettuce
+    case shred_lettuce
+    case cheese
+    case white_cheese
+    case bacon
+    case egg
+    case grilled_sauce
+    case spicy_sauce
+    case big_mac_sauce
+    case phileo_sauce
+    case yellow_mustard
+    case tartar_sauce
+    case sweet_lemon_sauce
+    case ten_one
+    case six_one
+    case chicken
+    case crisp
+    case shrimp
+    case fish
 }
 
 enum Burger_name:addable{
@@ -67,7 +91,9 @@ class BurgerClass : Menu{
     var name:Burger_name
     var buns:Buns
     var method:Method
+
     var wrap:Burger_name
+
     var pracement:Pracement
     var toppingList: [Topping] = []
 
