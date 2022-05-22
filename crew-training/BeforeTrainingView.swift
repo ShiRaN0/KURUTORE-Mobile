@@ -8,14 +8,36 @@
 import SwiftUI
 
 struct BeforeTrainingView: View {
+    @Binding var burgerName : String
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Color.gray
+                .ignoresSafeArea()
+            
+            
+            ZStack{
+                Color.white
+                VStack{
+                    Text(burgerName)
+                    Button(action: {
+                        // action
+                    }){
+                        Text("Game Start")
+                            .foregroundColor(.accentColor)
+                            .font(.title)
+                        
+                    }.padding()
+                    .background(.red)
+                    
+                    
+                }
+            }.padding()
+        }
+        
+        
+        
     }
 }
 
-struct BeforeTrainingView_Previews: PreviewProvider {
-    static var previews: some View {
-        BeforeTrainingView()
-    }
-}
+

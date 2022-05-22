@@ -81,7 +81,7 @@ protocol Menu{
 
 struct Burger :Codable{
 
-    let name:String
+    var name:String
     let buns:String
     let method:String
     let wrap:String

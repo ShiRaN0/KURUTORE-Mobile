@@ -15,7 +15,7 @@ struct HomeView: View {
       
         NavigationView{
             List(0..<burgers.count) { index in
-                NavigationLink(destination: Text(burgers[index].name)) {
+                NavigationLink(destination: BeforeTrainingView(burgerName: $burgers[index].name)) {
                     HStack{
                         Image(systemName:"questionmark.circle")
                         VStack(alignment:.leading){
