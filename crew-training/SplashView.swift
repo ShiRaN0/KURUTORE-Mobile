@@ -10,6 +10,8 @@ import SwiftUI
 struct SplashView: View {
     @State private var isLoading = true
     @State private var isPlayAnimation = false
+   
+    
     var body: some View {
         // TODO: - ローディング処理の実装 -
         if isLoading{
@@ -31,6 +33,8 @@ struct SplashView: View {
                         self.isPlayAnimation.toggle()
                     }
                 }
+                
+                
                
             }
             //とりあえずロードをしたという体で仮実装
@@ -39,9 +43,10 @@ struct SplashView: View {
             }
         }
         else{
-           TopView()
+            TopView()
         }
     }
+   
 }
 
 struct SplashView_Previews: PreviewProvider {

@@ -9,25 +9,24 @@ import SwiftUI
 
 struct HomeView: View {
     @State var isShowingSheet = false
-    @State var burgerNameList :[String] = ["aa","bb"]
-    @State var burgerNameForBinding = "hoge"
-    
-    // TODO: - Jsonパース　-
+    @Binding var burgers:[Burger]
 
-    
     var body: some View {
+      
         NavigationView{
-            List(0..<burgerNameList.count) { index in
-                NavigationLink(destination: Text(burgerNameList[index])) {
+            List(0..<burgers.count) { index in
+                NavigationLink(destination: Text(burgers[index].name)) {
                     HStack{
                         Image(systemName:"questionmark.circle")
-                        VStack{
-                            Text(burgerNameList[index])
+                        VStack(alignment:.leading){
+                            Text(burgers[index].name)
+                               
                             
-                            Text("hoge")
-                            
+                            //TODO: What's KVS
+                            Text("KVS: "+burgers[index].name)
+                                .font(.caption)
                         }.padding(.leading)
-                        
+
                     }
                 }.listRowInsets(
                     EdgeInsets(top: 10,
@@ -47,14 +46,9 @@ struct HomeView: View {
                             SettingView()
                         }
                     }
-                    
                 }
         }
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
+

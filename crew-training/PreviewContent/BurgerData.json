@@ -1,0 +1,46 @@
+[
+	{
+		"name": "ハンバーガー",
+		"buns": "Regular",
+		"method": "bake",
+        "wrap":"ハンバーガー",
+		"pracement": "horizontal",
+		"toppingList": [
+			"mustard",
+			"ketchup",
+			"onion",
+			"pickles",
+			"ten_one"
+		]
+	},
+	{
+		"name": "チーズバーガー",
+		"buns": "Regular",
+		"method": "bake",
+		"pracement": "horizontal",
+        "wrap":"チーズバーガー",
+		"toppingList": [
+			"mustard",
+			"ketchup",
+			"onion",
+			"pickles",
+			"cheese",
+			"ten_one"
+		]
+	},
+    {
+        "name": "hogeバーガー",
+        "buns": "Regular",
+        "method": "bake",
+        "pracement": "horizontal",
+        "wrap":"チーズバーガー",
+        "toppingList": [
+            "mustard",
+            "ketchup",
+            "onion",
+            "pickles",
+            "cheese",
+            "ten_one"
+        ]
+    }
+]

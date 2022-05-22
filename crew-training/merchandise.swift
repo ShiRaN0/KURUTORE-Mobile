@@ -8,7 +8,7 @@
 import Foundation
 
 //as MakerInterface
-protocol addable{
+protocol addable:Codable{
     
 }
 
@@ -68,13 +68,6 @@ enum Burger_name:addable{
     case チーズバーガー
     case てりやきバーガー
 
-    
-//Json内のバーガーの数でHomeViewのリストを使うため不要
-//    // TODO: - implements Caselterable -
-//    static let BurgerElements:[Burger_name] = [.ハンバーガー,.チーズバーガー,.てりやきバーガー]
-//    static func PrintPropertiesLength() -> Int {
-//        return BurgerElements.count
-//    }
 }
 
 protocol Menu{
@@ -86,26 +79,38 @@ protocol Menu{
 }
 
 
-class BurgerClass : Menu{
-    
-    var name:Burger_name
-    var buns:Buns
-    var method:Method
+struct Burger :Codable{
 
-    var wrap:Burger_name
+    let name:String
+    let buns:String
+    let method:String
+    let wrap:String
+    let pracement:String
+    let toppingList: [String]
+    //TODO: add KVS
+    //let kvs:String
 
-    var pracement:Pracement
-    var toppingList: [Topping] = []
+}
 
-    init(burgerName:String){
-        // TODO: - HomeでパースされたJsonデータの"name"によって初期化の値を変える-
-    }
-    
-    func addTopping(topping:Topping){
-        toppingList.append(topping)
-    }
+/*とりあえずBurger Structで実装しているが、今後下記クラスを使用するかも*/
+/*
+struct Burger :Codable{
+
+    let name:Burger_name
+    let buns:Buns
+    let method:Method
+    let wrap:Burger_name
+    let pracement:Pracement
+    let toppingList: [Topping]
+
+//    init(burgerName:String){
+//        // TODO: - HomeでパースされたJsonデータの"name"によって初期化の値を変える-
+//   //factoryパターン？使えそう
+//    }
 
     func getToppingList() -> [addable] {
         return toppingList
     }
 }
+*/
+

@@ -76,19 +76,19 @@
 				5BD0F48D2828C849008F58E5 /* HomeView.swift */,
 				5BD0F47928269649008F58E5 /* TopView.swift */,
 				5BD0F47B2826964C008F58E5 /* Assets.xcassets */,
-				5BD0F47D2826964C008F58E5 /* Preview Content */,
+				5BD0F47D2826964C008F58E5 /* PreviewContent */,
 				5BD0F48728278649008F58E5 /* merchandise.swift */,
 			);
 			path = "crew-training";
 			sourceTree = "<group>";
 		};
-		5BD0F47D2826964C008F58E5 /* Preview Content */ = {
+		5BD0F47D2826964C008F58E5 /* PreviewContent */ = {
 			isa = PBXGroup;
 			children = (
 				5BC121BF28339D8C004F64E8 /* BurgerData.json */,
 				5BD0F47E2826964C008F58E5 /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			path = PreviewContent;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
