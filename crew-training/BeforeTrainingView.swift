@@ -9,6 +9,7 @@ import SwiftUI
 
 struct BeforeTrainingView: View {
     @Binding var burgerName : String
+    //TODO: add Binding variable (Reference Burger struct)
     
     var body: some View {
         ZStack{
@@ -19,9 +20,10 @@ struct BeforeTrainingView: View {
             ZStack{
                 Color.white
                 VStack{
-                    Text(burgerName)
+                    Text(burgerName).foregroundColor(.black)
                     Button(action: {
-                        // action
+                        //TODO: Move to TrainingView
+                        //use binding object(Struct)
                     }){
                         Text("Game Start")
                             .foregroundColor(.accentColor)
