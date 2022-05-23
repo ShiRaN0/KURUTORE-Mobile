@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct BeforeTrainingView: View {
-    @Binding var burgerName : String
-    //TODO: add Binding variable (Reference Burger struct)
+    @Binding var burger : Burger
     
     var body: some View {
+        
         ZStack{
             Color.gray
                 .ignoresSafeArea()
             
-            
             ZStack{
                 Color.white
                 VStack{
-                    Text(burgerName).foregroundColor(.black)
+                    Text(burger.name).foregroundColor(.black)
                     Button(action: {
                         //TODO: Move to TrainingView
                         //use binding object(Struct)
