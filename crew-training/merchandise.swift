@@ -92,25 +92,4 @@ struct Burger :Codable{
 
 }
 
-/*とりあえずBurger Structで実装しているが、今後下記クラスを使用するかも*/
-/*
-struct Burger :Codable{
-
-    let name:Burger_name
-    let buns:Buns
-    let method:Method
-    let wrap:Burger_name
-    let pracement:Pracement
-    let toppingList: [Topping]
-
-//    init(burgerName:String){
-//        // TODO: - HomeでパースされたJsonデータの"name"によって初期化の値を変える-
-//   //factoryパターン？使えそう
-//    }
-
-    func getToppingList() -> [addable] {
-        return toppingList
-    }
-}
-*/
 

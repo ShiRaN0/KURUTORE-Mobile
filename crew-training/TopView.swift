@@ -16,13 +16,11 @@ struct TopView: View {
     }
     var body: some View {
         
-        
         TabView{
             HomeView(burgers: $burgers)
                 .tabItem(){
                     Image(systemName: "house")
                     Text("Home")
-                    
                 }
             ManualView()
                 .tabItem(){
