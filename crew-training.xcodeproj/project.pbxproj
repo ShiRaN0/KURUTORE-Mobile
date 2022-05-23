@@ -17,7 +17,7 @@
 		5BD0F4862826A1FD008F58E5 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F4852826A1FD008F58E5 /* SplashView.swift */; };
 		5BD0F48828278649008F58E5 /* merchandise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F48728278649008F58E5 /* merchandise.swift */; };
 		5BD0F48A2828BDE8008F58E5 /* ManualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F4892828BDE8008F58E5 /* ManualView.swift */; };
-		5BD0F48C2828C7EC008F58E5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F48B2828C7EB008F58E5 /* ProfileView.swift */; };
+		5BD0F48C2828C7EC008F58E5 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F48B2828C7EB008F58E5 /* RecipeView.swift */; };
 		5BD0F48E2828C849008F58E5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F48D2828C849008F58E5 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,7 +33,7 @@
 		5BD0F4852826A1FD008F58E5 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		5BD0F48728278649008F58E5 /* merchandise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = merchandise.swift; sourceTree = "<group>"; };
 		5BD0F4892828BDE8008F58E5 /* ManualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualView.swift; sourceTree = "<group>"; };
-		5BD0F48B2828C7EB008F58E5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		5BD0F48B2828C7EB008F58E5 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		5BD0F48D2828C849008F58E5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,7 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				5B16C378282A9EF6004981D8 /* BeforeTrainingView.swift */,
-				5BD0F48B2828C7EB008F58E5 /* ProfileView.swift */,
+				5BD0F48B2828C7EB008F58E5 /* RecipeView.swift */,
 				5BA85E542828DC81006A1819 /* SettingView.swift */,
 				5BD0F4892828BDE8008F58E5 /* ManualView.swift */,
 				5BD0F4852826A1FD008F58E5 /* SplashView.swift */,
@@ -166,7 +166,7 @@
 				5BD0F48E2828C849008F58E5 /* HomeView.swift in Sources */,
 				5B16C379282A9EF6004981D8 /* BeforeTrainingView.swift in Sources */,
 				5BD0F47A28269649008F58E5 /* TopView.swift in Sources */,
-				5BD0F48C2828C7EC008F58E5 /* ProfileView.swift in Sources */,
+				5BD0F48C2828C7EC008F58E5 /* RecipeView.swift in Sources */,
 				5BD0F47828269649008F58E5 /* crew_trainingApp.swift in Sources */,
 				5BA85E552828DC81006A1819 /* SettingView.swift in Sources */,
 				5BD0F4862826A1FD008F58E5 /* SplashView.swift in Sources */,

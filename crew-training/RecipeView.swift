@@ -7,15 +7,15 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct RecipeView: View {
     @State var isShowingSheet = false
     var body: some View {
         NavigationView{
             VStack{
-                Text("profile")
+                Text("Recipe")
             }
             
-            .navigationTitle("Profile")
+            .navigationTitle("Recipe")
             .navigationBarTitleDisplayMode(.inline)
             
             .toolbar {
@@ -33,8 +33,8 @@ struct ProfileView: View {
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct RecipeView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        RecipeView()
     }
 }

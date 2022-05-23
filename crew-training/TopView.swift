@@ -29,10 +29,10 @@ struct TopView: View {
                     Image(systemName: "book.fill")
                     Text("Manual")
                 }
-            ProfileView()
+            RecipeView()
                 .tabItem(){
-                    Image(systemName: "person.circle")
-                    Text("Profile")
+                    Image(systemName: "bookmark.fill")
+                    Text("Recipe")
                 }
         }
     }
