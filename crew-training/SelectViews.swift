@@ -21,7 +21,6 @@ struct TrainingView: View {
 struct BunsSelectView : View{
     
     @Binding var burger: Burger
-    @State var bunsName:String = ""
     @State var moveToNextView = false
     
     //FIXME: change image
