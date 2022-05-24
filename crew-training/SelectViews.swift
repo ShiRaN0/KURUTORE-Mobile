@@ -24,6 +24,7 @@ struct BunsSelectView : View{
     @State var bunsName:String = ""
     @State var moveToNextView = false
     
+    //FIXME: change image
     
     struct Symbol: Identifiable {
         var id = UUID()
@@ -52,10 +53,13 @@ struct BunsSelectView : View{
     
     var body: some View{
         if(!moveToNextView){
-            let columns: [GridItem] = [GridItem(.adaptive(minimum: 100, maximum: 150))]
+            let columns: [GridItem] = [GridItem(.adaptive(minimum: 150, maximum: 500))]
             
             //TODO: print "○" or "✗"
             VStack{
+                Text("バンズを選択してください。")
+                    .padding(.top)
+                
                 
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
@@ -70,8 +74,15 @@ struct BunsSelectView : View{
                                         moveToNextView=true
                                     }
                                 }){
-                                    Image(systemName: symbol.image)
-                                    Text(symbol.name)
+                                    //TODO: add burger's Image
+                                    //FIXME: change systemName to "burger's image Name"
+                                    VStack{
+                                        Image(systemName: symbol.image)
+                                        //.resizable()
+                                        //.scaledToFit()
+                                            .foregroundColor(.red)
+                                        Text(symbol.name)
+                                    }.padding(.vertical)
                                 }
                             }
                         }
@@ -102,9 +113,3 @@ struct PracementSelectView : View{
     }
 }
 
-
-//struct TrainingView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TrainingView()
-//    }
-//}
