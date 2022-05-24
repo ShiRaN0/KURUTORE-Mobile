@@ -54,7 +54,6 @@ struct BunsSelectView : View{
         
         if(moveToNextView){
             PracementSelectView(burger: $burger)
-            
         }else{
             
             let columns: [GridItem] = [GridItem(.adaptive(minimum: 150, maximum: 500))]

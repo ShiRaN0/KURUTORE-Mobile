@@ -21,7 +21,7 @@ struct HomeView: View {
                         Image(systemName:"questionmark.circle")
                         VStack(alignment:.leading){
                             Text(burgers[index].name)
-                            //TODO: What's KVS
+                            //TODO: use KVS property in BurgerData
                             Text("KVS: "+burgers[index].name)
                                 .font(.caption)
                         }.padding(.leading)
