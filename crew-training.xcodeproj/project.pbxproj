@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B16C379282A9EF6004981D8 /* BeforeTrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16C378282A9EF6004981D8 /* BeforeTrainingView.swift */; };
-		5B76A2D8283BB69E0074CC95 /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A2D7283BB69E0074CC95 /* TrainingView.swift */; };
+		5B76A2D8283BB69E0074CC95 /* SelectViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B76A2D7283BB69E0074CC95 /* SelectViews.swift */; };
 		5BA85E552828DC81006A1819 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA85E542828DC81006A1819 /* SettingView.swift */; };
 		5BC121C028339D8C004F64E8 /* BurgerData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5BC121BF28339D8C004F64E8 /* BurgerData.json */; };
 		5BD0F47828269649008F58E5 /* crew_trainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F47728269649008F58E5 /* crew_trainingApp.swift */; };
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		5B16C378282A9EF6004981D8 /* BeforeTrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeforeTrainingView.swift; sourceTree = "<group>"; };
-		5B76A2D7283BB69E0074CC95 /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
+		5B76A2D7283BB69E0074CC95 /* SelectViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectViews.swift; sourceTree = "<group>"; };
 		5BA85E542828DC81006A1819 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		5BC121BF28339D8C004F64E8 /* BurgerData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = BurgerData.json; sourceTree = "<group>"; };
 		5BD0F47428269649008F58E5 /* crew-training.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "crew-training.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,10 +77,10 @@
 				5BD0F47728269649008F58E5 /* crew_trainingApp.swift */,
 				5BD0F48D2828C849008F58E5 /* HomeView.swift */,
 				5BD0F47928269649008F58E5 /* TopView.swift */,
+				5B76A2D7283BB69E0074CC95 /* SelectViews.swift */,
+				5BD0F48728278649008F58E5 /* merchandise.swift */,
 				5BD0F47B2826964C008F58E5 /* Assets.xcassets */,
 				5BD0F47D2826964C008F58E5 /* Preview Content */,
-				5BD0F48728278649008F58E5 /* merchandise.swift */,
-				5B76A2D7283BB69E0074CC95 /* TrainingView.swift */,
 			);
 			path = "crew-training";
 			sourceTree = "<group>";
@@ -167,7 +167,7 @@
 			files = (
 				5BD0F48A2828BDE8008F58E5 /* ManualView.swift in Sources */,
 				5BD0F48E2828C849008F58E5 /* HomeView.swift in Sources */,
-				5B76A2D8283BB69E0074CC95 /* TrainingView.swift in Sources */,
+				5B76A2D8283BB69E0074CC95 /* SelectViews.swift in Sources */,
 				5B16C379282A9EF6004981D8 /* BeforeTrainingView.swift in Sources */,
 				5BD0F47A28269649008F58E5 /* TopView.swift in Sources */,
 				5BD0F48C2828C7EC008F58E5 /* RecipeView.swift in Sources */,

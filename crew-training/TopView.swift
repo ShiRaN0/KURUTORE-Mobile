@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct TopView: View {
+    
     @State var burgers:[Burger] = jsonParse(fileName: "BurgerData.json")
+   
     init(){
         UITabBar.appearance().barTintColor = UIColor.red
         UITabBar.appearance().unselectedItemTintColor = UIColor.gray
         UITabBar.appearance().backgroundColor = UIColor.red
     }
+    
     var body: some View {
         
         TabView{
@@ -57,7 +60,6 @@ struct TopView: View {
             fatalError("JSON読み込みエラー")
         }
          
-        
         return burgers
     }
     

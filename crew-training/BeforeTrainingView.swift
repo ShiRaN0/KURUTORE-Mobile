@@ -21,8 +21,11 @@ struct BeforeTrainingView: View {
                 
                 ZStack{
                     Color.white
+                        
                     VStack{
-                        Text(burger.name).foregroundColor(.black)
+                        Text(burger.name)
+                            .foregroundColor(.black)
+                        
                         Button(action: {
                             moveToTrainingView.toggle()
                         }){
@@ -32,15 +35,13 @@ struct BeforeTrainingView: View {
                             
                         }.padding()
                             .background(.red)
-                        
-                        
                     }
                 }.padding()
             }
             
         }
         else{
-            TrainingView(burger: $burger)
+            BunsSelectView(burger: $burger)
         }
     }
 }
