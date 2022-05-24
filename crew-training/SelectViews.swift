@@ -23,12 +23,11 @@ struct BunsSelectView : View{
     @Binding var burger: Burger
     @State var moveToNextView = false
     
-    //FIXME: change image
     
     struct Symbol: Identifiable {
-        var id = UUID()
-        var image: String
-        var name: String
+        let id = UUID()
+        let image: String
+        let name: String
     }
     let symbols = [Symbol(image: "drop.fill", name: "Regular"),
                    Symbol(image: "flame.fill", name: "Sesame"),
@@ -38,9 +37,9 @@ struct BunsSelectView : View{
                    Symbol(image: "tortoise.fill", name: "rice")]
     
     
+    
     private let correctSound = try!  AVAudioPlayer(data: NSDataAsset(name: "correct")!.data)
     private let incorrectSound = try!  AVAudioPlayer(data: NSDataAsset(name: "incorrect")!.data)
-    
     
     private func playSound(isCorrect:Bool){
         if (isCorrect){
@@ -50,15 +49,20 @@ struct BunsSelectView : View{
         }
     }
     
+    
     var body: some View{
-        if(!moveToNextView){
+        
+        if(moveToNextView){
+            PracementSelectView(burger: $burger)
+            
+        }else{
+            
             let columns: [GridItem] = [GridItem(.adaptive(minimum: 150, maximum: 500))]
             
             //TODO: print "○" or "✗"
             VStack{
                 Text("バンズを選択してください。")
                     .padding(.top)
-                
                 
                 ScrollView {
                     LazyVGrid(columns: columns, spacing: 20) {
@@ -90,9 +94,7 @@ struct BunsSelectView : View{
                 }
             }
         }
-        else{
-            PracementSelectView(burger: $burger)
-        }
+        
         
     }
     
