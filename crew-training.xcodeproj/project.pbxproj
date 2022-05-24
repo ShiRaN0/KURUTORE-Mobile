@@ -19,6 +19,7 @@
 		5BD0F48A2828BDE8008F58E5 /* ManualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F4892828BDE8008F58E5 /* ManualView.swift */; };
 		5BD0F48C2828C7EC008F58E5 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F48B2828C7EB008F58E5 /* RecipeView.swift */; };
 		5BD0F48E2828C849008F58E5 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD0F48D2828C849008F58E5 /* HomeView.swift */; };
+		5D5D754B283CD0F70080AB04 /* testManualView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5D754A283CD0F70080AB04 /* testManualView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		5BD0F4892828BDE8008F58E5 /* ManualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualView.swift; sourceTree = "<group>"; };
 		5BD0F48B2828C7EB008F58E5 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 		5BD0F48D2828C849008F58E5 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		5D5D754A283CD0F70080AB04 /* testManualView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testManualView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				5BD0F47B2826964C008F58E5 /* Assets.xcassets */,
 				5BD0F47D2826964C008F58E5 /* Preview Content */,
 				5BD0F48728278649008F58E5 /* merchandise.swift */,
+				5D5D754A283CD0F70080AB04 /* testManualView.swift */,
 			);
 			path = "crew-training";
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				5BD0F47828269649008F58E5 /* crew_trainingApp.swift in Sources */,
 				5BA85E552828DC81006A1819 /* SettingView.swift in Sources */,
 				5BD0F4862826A1FD008F58E5 /* SplashView.swift in Sources */,
+				5D5D754B283CD0F70080AB04 /* testManualView.swift in Sources */,
 				5BD0F48828278649008F58E5 /* merchandise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +303,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"crew-training/Preview Content\"";
-				DEVELOPMENT_TEAM = 6YXQD94JB2;
+				DEVELOPMENT_TEAM = Z65LK5B28G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -328,7 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"crew-training/Preview Content\"";
-				DEVELOPMENT_TEAM = 6YXQD94JB2;
+				DEVELOPMENT_TEAM = Z65LK5B28G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
