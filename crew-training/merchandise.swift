@@ -79,9 +79,9 @@ protocol Menu{
 }
 
 
-struct Burger :Codable{
+class Burger :Codable{
 
-    var name:String
+    let name:String
     let buns:String
     let method:String
     let wrap:String

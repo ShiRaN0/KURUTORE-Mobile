@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct SplashView: View {
+    
     @State private var isLoading = true
-    @State private var isPlayAnimation = false
+    @State private var canPlayAnimation = false
    
     
     var body: some View {
@@ -23,20 +24,17 @@ struct SplashView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 300, height:300 )
-                    .scaleEffect(isPlayAnimation ? 1.0:0.5)
-                
+                    .scaleEffect(canPlayAnimation ? 1.0:0.5)
                 }
             }
             .onAppear {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                     withAnimation(){
-                        self.isPlayAnimation.toggle()
+                        self.canPlayAnimation.toggle()
                     }
                 }
-                
-                
-               
             }
+            
             //とりあえずロードをしたという体で仮実装
             .onTapGesture {
                 isLoading=false

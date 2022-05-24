@@ -30,7 +30,7 @@
 	},
     {
         "name": "hogeバーガー",
-        "buns": "Regular",
+        "buns": "Sesame",
         "method": "bake",
         "pracement": "horizontal",
         "wrap":"チーズバーガー",

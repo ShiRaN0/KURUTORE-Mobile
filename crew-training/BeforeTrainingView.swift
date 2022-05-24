@@ -8,37 +8,41 @@
 import SwiftUI
 
 struct BeforeTrainingView: View {
-    @Binding var burgerName : String
-    //TODO: add Binding variable (Reference Burger struct)
+    @State var moveToTrainingView : Bool = false
+    @Binding var burger : Burger
     
     var body: some View {
-        ZStack{
-            Color.gray
-                .ignoresSafeArea()
-            
+        
+        if(!moveToTrainingView){
             
             ZStack{
-                Color.white
-                VStack{
-                    Text(burgerName).foregroundColor(.black)
-                    Button(action: {
-                        //TODO: Move to TrainingView
-                        //use binding object(Struct)
-                    }){
-                        Text("Game Start")
-                            .foregroundColor(.accentColor)
-                            .font(.title)
+                Color.gray
+                    .ignoresSafeArea()
+                
+                ZStack{
+                    Color.white
                         
-                    }.padding()
-                    .background(.red)
-                    
-                    
-                }
-            }.padding()
+                    VStack{
+                        Text(burger.name)
+                            .foregroundColor(.black)
+                        
+                        Button(action: {
+                            moveToTrainingView.toggle()
+                        }){
+                            Text("Game Start")
+                                .foregroundColor(.accentColor)
+                                .font(.title)
+                            
+                        }.padding()
+                            .background(.red)
+                    }
+                }.padding()
+            }
+            
         }
-        
-        
-        
+        else{
+            BunsSelectView(burger: $burger)
+        }
     }
 }
 
