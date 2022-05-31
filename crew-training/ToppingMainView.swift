@@ -14,8 +14,10 @@ struct ToppingMainView: View {
     
     var body: some View {
         
-        Color.brown.frame(width: 200, height: 100)
+       
         NavigationView{
+            VStack{
+            Color.brown.frame(width: 200, height: 100)
             List(0..<burger.toppingList.count) { index in
                 NavigationLink(destination: ToppingSelectView(burger:$burger)) {
                     
@@ -30,9 +32,9 @@ struct ToppingMainView: View {
             }
             .navigationTitle("トッピング選択").navigationBarTitleDisplayMode(.inline)
             
-            
+            Color.brown.frame(width: 200, height: 100)
         }
-        Color.brown.frame(width: 200, height: 100)
+        }
     }
 }
 
