@@ -26,7 +26,7 @@ struct HomeView: View {
                         VStack(alignment:.leading){
                             Text(burgers[index].name)
                             //TODO: use KVS property in BurgerData
-                            Text("KVS: "+burgers[index].name)
+                            Text("KVS: "+burgers[index].kvs)
                                 .font(.caption)
                         }.padding(.leading)
                         
