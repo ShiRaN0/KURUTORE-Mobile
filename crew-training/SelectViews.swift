@@ -18,6 +18,21 @@ struct TrainingView: View {
     }
 }
 
+struct Tools{
+    
+    private static let correctSound = try!  AVAudioPlayer(data: NSDataAsset(name: "correct")!.data)
+    private static let incorrectSound = try!  AVAudioPlayer(data: NSDataAsset(name: "incorrect")!.data)
+
+    static func playSound(isCorrect:Bool){
+        if (isCorrect){
+            correctSound.play()
+        }else{
+            incorrectSound.play()
+        }
+    }
+}
+
+
 struct BunsSelectView : View{
     
     @Binding var burger: Burger
@@ -37,19 +52,7 @@ struct BunsSelectView : View{
                    Symbol(image: "tortoise.fill", name: "rice")]
     
     
-    
-    private let correctSound = try!  AVAudioPlayer(data: NSDataAsset(name: "correct")!.data)
-    private let incorrectSound = try!  AVAudioPlayer(data: NSDataAsset(name: "incorrect")!.data)
-    
-    private func playSound(isCorrect:Bool){
-        if (isCorrect){
-            correctSound.play()
-        }else{
-            incorrectSound.play()
-        }
-    }
-    
-    
+
     var body: some View{
         
         if(moveToNextView){
@@ -69,10 +72,10 @@ struct BunsSelectView : View{
                             VStack {
                                 Button(action:{
                                     if(symbol.name != burger.buns){
-                                        playSound(isCorrect: false)
+                                        Tools.playSound(isCorrect: false)
                                         moveToNextView=false
                                     }else{
-                                        playSound(isCorrect: true)
+                                        Tools.playSound(isCorrect: true)
                                         moveToNextView=true
                                     }
                                 }){
