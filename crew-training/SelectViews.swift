@@ -42,12 +42,11 @@ struct BunsSelectView : View{
                    Symbol(image: "hare.fill", name: "Tatsuta"),
                    Symbol(image: "tortoise.fill", name: "rice")]
     
-    
 
     var body: some View{
         
         if(moveToNextView){
-            PracementSelectView(burger: $burger)
+            ToppingMainView(burger: $burger)
         }else{
             
             let columns: [GridItem] = [GridItem(.adaptive(minimum: 150, maximum: 500))]
@@ -95,14 +94,14 @@ struct BunsSelectView : View{
 }
 
 
-struct PracementSelectView : View{
+struct ToppingSelectView : View{
     
     @Binding var burger :Burger
-    @State var pracementName:String = ""
+    
     
     var body: some View{
         VStack{
-            Text("pracement")
+            Text("ここにトッピング一覧が入ります。")
         }
     }
 }
