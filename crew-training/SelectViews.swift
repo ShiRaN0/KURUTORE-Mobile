@@ -8,15 +8,6 @@
 import SwiftUI
 import AVFoundation
 
-struct TrainingView: View {
-    @Binding var burger : Burger
-    var body: some View {
-        VStack{
-            Text(burger.name)
-                .font(.largeTitle)
-        }
-    }
-}
 
 struct Tools{
     
