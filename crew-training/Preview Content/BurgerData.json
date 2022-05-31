@@ -27,20 +27,5 @@
 			"cheese",
 			"ten_one"
 		]
-	},
-    {
-        "name": "hogeバーガー",
-        "buns": "Sesame",
-        "method": "bake",
-        "pracement": "horizontal",
-        "wrap":"チーズバーガー",
-        "toppingList": [
-            "mustard",
-            "ketchup",
-            "onion",
-            "pickles",
-            "cheese",
-            "ten_one"
-        ]
-    }
+	}
 ]

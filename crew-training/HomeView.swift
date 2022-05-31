@@ -18,7 +18,12 @@ struct HomeView: View {
                 NavigationLink(destination: BeforeTrainingView(burger:$burgers[index])) {
                     
                     HStack{
-                        Image(systemName:"questionmark.circle")
+                        Image(burgers[index].name)
+                            .resizable()
+                         .scaledToFit()
+                           .frame(height:30)
+                           
+                       // Image(systemName:"questionmark.circle")
                         VStack(alignment:.leading){
                             Text(burgers[index].name)
                             //TODO: use KVS property in BurgerData
