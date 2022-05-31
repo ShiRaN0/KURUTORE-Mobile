@@ -27,7 +27,7 @@ struct Tools{
 struct BunsSelectView : View{
     
     @Binding var burger: Burger
-    @State var moveToNextView = false
+    @State var isCorrect = false
     
     
     struct Symbol: Identifiable {
@@ -45,7 +45,7 @@ struct BunsSelectView : View{
 
     var body: some View{
         
-        if(moveToNextView){
+        if(isCorrect){
             ToppingMainView(burger: $burger)
         }else{
             
@@ -63,10 +63,10 @@ struct BunsSelectView : View{
                                 Button(action:{
                                     if(symbol.name != burger.buns){
                                         Tools.playSound(isCorrect: false)
-                                        moveToNextView=false
+                                        isCorrect=false
                                     }else{
                                         Tools.playSound(isCorrect: true)
-                                        moveToNextView=true
+                                        isCorrect=true
                                     }
                                 }){
                                     //TODO: add burger's Image
