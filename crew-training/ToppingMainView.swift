@@ -14,9 +14,9 @@ struct ToppingMainView: View {
     
     //MEMO: bool配列を保持して、すべての要素がtrueになったらmoveToTrainingViewをtrueにして画面遷移？
     
-    //    @State var isCorrectForToppings:[Bool]
+    //    @State var areToppingsCorrect:[Bool]
     //    init(){
-    //        self.isCorrectForToppings = Array(repeating: false, count: burger.toppingList.count)
+    //        self.areToppingsCorrect = Array(repeating: false, count: burger.toppingList.count)
     //    }
     
     
