@@ -31,5 +31,56 @@
 			"ten_one"
 		]
         
-	}
+	},
+    {
+        "name": "hoge1バーガー",
+        "buns": "Regular",
+        "method": "bake",
+        "pracement": "horizontal",
+        "wrap":"チーズバーガー",
+        "kvs":"CB",
+        "toppingList": [
+            "mustard",
+            "ketchup",
+            "onion",
+            "pickles",
+            "cheese",
+            "ten_one"
+        ]
+        
+    },
+    {
+        "name": "hoge2バーガー",
+        "buns": "Regular",
+        "method": "bake",
+        "pracement": "horizontal",
+        "wrap":"チーズバーガー",
+        "kvs":"CB",
+        "toppingList": [
+            "mustard",
+            "ketchup",
+            "onion",
+            "pickles",
+            "cheese",
+            "ten_one"
+        ]
+        
+    },
+    {
+        "name": "hoge3バーガー",
+        "buns": "Regular",
+        "method": "bake",
+        "pracement": "horizontal",
+        "wrap":"チーズバーガー",
+        "kvs":"CB",
+        "toppingList": [
+            "mustard",
+            "ketchup",
+            "onion",
+            "pickles",
+            "cheese",
+            "ten_one"
+        ]
+        
+    },
 ]
