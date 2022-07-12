@@ -10,21 +10,26 @@ import SwiftUI
 struct HomeView: View {
     @State var isShowingSheet = false
     @Binding var burgers:[Burger]
-
+    
     var body: some View {
-      
+        
         NavigationView{
             List(0..<burgers.count) { index in
-                NavigationLink(destination: BeforeTrainingView(burger:$burgers[index])) {
+                NavigationLink(destination: BunsSelectView(burger:$burgers[index]).navigationBarBackButtonHidden(true)) {
                     
                     HStack{
-                        Image(systemName:"questionmark.circle")
+                        Image(burgers[index].name)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height:30)
+                        
                         VStack(alignment:.leading){
                             Text(burgers[index].name)
                             //TODO: use KVS property in BurgerData
-                            Text("KVS: "+burgers[index].name)
+                            Text("KVS: "+burgers[index].kvs)
                                 .font(.caption)
                         }.padding(.leading)
+                        
                     }
                 }.listRowInsets(
                     EdgeInsets(top: 10,
@@ -33,7 +38,8 @@ struct HomeView: View {
                                trailing: 40
                               )
                 )
-            }.navigationTitle("クルトレ").navigationBarTitleDisplayMode(.inline)
+            }
+            .navigationTitle("クルトレ").navigationBarTitleDisplayMode(.inline)
             
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing){

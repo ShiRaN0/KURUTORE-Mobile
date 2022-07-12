@@ -13,6 +13,7 @@ struct SplashView: View {
     @State private var canPlayAnimation = false
    
     
+    
     var body: some View {
         // TODO: - ローディング処理の実装 -
         if isLoading{

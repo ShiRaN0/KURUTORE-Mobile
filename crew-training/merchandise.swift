@@ -86,9 +86,8 @@ class Burger :Codable{
     let method:String
     let wrap:String
     let pracement:String
-    let toppingList: [String]
-    //TODO: add KVS
-    //let kvs:String
+    var toppingList: [String]
+    let kvs:String
 
 }
 

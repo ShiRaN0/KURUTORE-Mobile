@@ -2,33 +2,42 @@
 //  TrainingView.swift
 //  crew-training
 //
+//  問題に関するViewを当ファイルにまとめて定義している。
+//
 //  Created by 齋藤有希 on 2022/05/23.
 //
 
 import SwiftUI
 import AVFoundation
 
-struct TrainingView: View {
-    @Binding var burger : Burger
-    var body: some View {
-        VStack{
-            Text(burger.name)
-                .font(.largeTitle)
+
+struct Tools{
+    
+    private static let correctSound = try!  AVAudioPlayer(data: NSDataAsset(name: "correct")!.data)
+    private static let incorrectSound = try!  AVAudioPlayer(data: NSDataAsset(name: "incorrect")!.data)
+    
+    internal static func playSound(isCorrect:Bool){
+        if (isCorrect){
+            correctSound.play()
+        }else{
+            incorrectSound.play()
         }
     }
+}
+struct Symbol: Identifiable {
+    let id = UUID()
+    let image: String
+    let name: String
 }
 
 struct BunsSelectView : View{
     
     @Binding var burger: Burger
-    @State var moveToNextView = false
+    @State var isCorrect = false
     
     
-    struct Symbol: Identifiable {
-        let id = UUID()
-        let image: String
-        let name: String
-    }
+    
+    //FIXME: change image to burger
     let symbols = [Symbol(image: "drop.fill", name: "Regular"),
                    Symbol(image: "flame.fill", name: "Sesame"),
                    Symbol(image: "bolt.fill", name: "BigMac"),
@@ -37,23 +46,11 @@ struct BunsSelectView : View{
                    Symbol(image: "tortoise.fill", name: "rice")]
     
     
-    
-    private let correctSound = try!  AVAudioPlayer(data: NSDataAsset(name: "correct")!.data)
-    private let incorrectSound = try!  AVAudioPlayer(data: NSDataAsset(name: "incorrect")!.data)
-    
-    private func playSound(isCorrect:Bool){
-        if (isCorrect){
-            correctSound.play()
-        }else{
-            incorrectSound.play()
-        }
-    }
-    
-    
     var body: some View{
         
-        if(moveToNextView){
-            PracementSelectView(burger: $burger)
+        if(isCorrect){
+            ToppingMainView(burger: $burger)
+            
         }else{
             
             let columns: [GridItem] = [GridItem(.adaptive(minimum: 150, maximum: 500))]
@@ -69,11 +66,11 @@ struct BunsSelectView : View{
                             VStack {
                                 Button(action:{
                                     if(symbol.name != burger.buns){
-                                        playSound(isCorrect: false)
-                                        moveToNextView=false
+                                        Tools.playSound(isCorrect: false)
+                                        isCorrect=false
                                     }else{
-                                        playSound(isCorrect: true)
-                                        moveToNextView=true
+                                        Tools.playSound(isCorrect: true)
+                                        isCorrect=true
                                     }
                                 }){
                                     //TODO: add burger's Image
@@ -100,16 +97,70 @@ struct BunsSelectView : View{
     
 }
 
-
-struct PracementSelectView : View{
+//TODO: トッピングすべてを選択したらフラグをtrueにする。
+struct ToppingSelectView : View{
     
     @Binding var burger :Burger
-    @State var pracementName:String = ""
+    //TODO: change String to Topping(enum)
+    @Binding var topping:String
+    @State var isCorrect = false
+    
     
     var body: some View{
-        VStack{
-            Text("pracement")
+        
+        if isCorrect{
+            Text("正解！")
+        }else{
+            
+            let columns: [GridItem] = [GridItem(.adaptive(minimum: 150, maximum: 500))]
+            
+            
+            
+            //FIXME: change image to burger
+            let symbols = [Symbol(image: "drop.fill", name: "mustard"),
+                           Symbol(image: "flame.fill", name: "ketchup"),
+                           Symbol(image: "bolt.fill", name: "onion"),
+                           Symbol(image: "leaf.fill", name: "pickles"),
+                           Symbol(image: "hare.fill", name: "cheese"),
+                           Symbol(image: "tortoise.fill", name: "ten_one")]
+            
+            
+            
+            VStack{
+                Text("バンズを選択してください。")
+                    .padding(.top)
+                
+                ScrollView {
+                    LazyVGrid(columns: columns, spacing: 20) {
+                        ForEach(symbols) { symbol in
+                            VStack {
+                                Button(action:{
+                                    if(symbol.name != topping){
+                                        Tools.playSound(isCorrect: false)
+                                        isCorrect=false
+                                    }else{
+                                        Tools.playSound(isCorrect: true)
+                                        isCorrect=true
+                                    }
+                                }){
+                                    //TODO: add burger's Image
+                                    //FIXME: change systemName to "burger's image Name"
+                                    VStack{
+                                        Image(systemName: symbol.image)
+                                        //.resizable()
+                                        //.scaledToFit()
+                                            .foregroundColor(.red)
+                                        Text(symbol.name)
+                                    }.padding(.vertical)
+                                }
+                            }
+                        }
+                    }
+                    .padding()
+                }
+            }
         }
+        
     }
 }
 

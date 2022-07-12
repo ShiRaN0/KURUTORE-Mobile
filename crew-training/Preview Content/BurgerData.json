@@ -5,6 +5,7 @@
 		"method": "bake",
         "wrap":"ハンバーガー",
 		"pracement": "horizontal",
+        "kvs":"HB",
 		"toppingList": [
 			"mustard",
 			"ketchup",
@@ -12,6 +13,7 @@
 			"pickles",
 			"ten_one"
 		]
+        
 	},
 	{
 		"name": "チーズバーガー",
@@ -19,6 +21,7 @@
 		"method": "bake",
 		"pracement": "horizontal",
         "wrap":"チーズバーガー",
+        "kvs":"CB",
 		"toppingList": [
 			"mustard",
 			"ketchup",
@@ -27,13 +30,15 @@
 			"cheese",
 			"ten_one"
 		]
+        
 	},
     {
-        "name": "hogeバーガー",
-        "buns": "Sesame",
+        "name": "hoge1バーガー",
+        "buns": "Regular",
         "method": "bake",
         "pracement": "horizontal",
         "wrap":"チーズバーガー",
+        "kvs":"CB",
         "toppingList": [
             "mustard",
             "ketchup",
@@ -42,5 +47,40 @@
             "cheese",
             "ten_one"
         ]
-    }
+        
+    },
+    {
+        "name": "hoge2バーガー",
+        "buns": "Regular",
+        "method": "bake",
+        "pracement": "horizontal",
+        "wrap":"チーズバーガー",
+        "kvs":"CB",
+        "toppingList": [
+            "mustard",
+            "ketchup",
+            "onion",
+            "pickles",
+            "cheese",
+            "ten_one"
+        ]
+        
+    },
+    {
+        "name": "hoge3バーガー",
+        "buns": "Regular",
+        "method": "bake",
+        "pracement": "horizontal",
+        "wrap":"チーズバーガー",
+        "kvs":"CB",
+        "toppingList": [
+            "mustard",
+            "ketchup",
+            "onion",
+            "pickles",
+            "cheese",
+            "ten_one"
+        ]
+        
+    },
 ]
